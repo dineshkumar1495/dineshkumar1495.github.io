@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dinesh Kumar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Dinesh Kumar</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li class="current"><a href="projects.html">Projects</a></li>
+							<li class="current"><a href="blogs_list.html">Blogs</a></li>
+							<li class="current"><a href="index.html">CV</a></li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon solid fa-mobile-alt"></span>
+						<h2><strong>Peek into My Academic World</strong></h2>
+						<!-- <p>Where that in the center faces the nameless horrors alone.</p> -->
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										
+										<header>
+											<h3><strong>Meow</strong></h3>
+										</header>
+
+										
+										<p>Step 1:
+
+											Download the openvpn file and connect to the vpn. Spawn the machine to get the IP address to attack.
+											<br><br>
+											<a  class="image featured"><img src="images/meow_1.png" alt="" /></a> <br><br>
+
+											Some questions are pretty straightforward. Like for example, this one <br><br>
+
+											<a  class="image featured"><img src="images/meow_2.png" alt="" /></a> <br><br>
+
+											The answers were not visible anymore by the time I took the screenshots but here are the answers for these questions. <br><br>
+
+											<a  class="image featured"><img src="images/meow_3.png" alt="" /></a> <br>
+
+											- Terminal<br><br>
+
+											<a  class="image featured"><img src="images/meow_4.png" alt="" /></a> <br>
+
+											- Openvpn<br><br>
+														
+											<a  class="image featured"><img src="images/meow_5.png" alt="" /></a> <br>
+											
+											- ping<br><br>
+
+											<hr>
+
+											<a  class="image featured"><img src="images/meow_6.png" alt="" /></a> <br>
+											
+											-nmap <hr><hr>
+											
+											<a  class="image featured"><img src="images/meow_7.png" alt="" /></a> <br>
+											
+											For this one though, we need to do a nmap scan of the target IP, to figure out the open ports and services running on the target machine with the given 
+											ip address.  <br><br>
+											
+											<a  class="image featured"><img src="images/meow_8.png" alt="" /></a> <br>
+											
+											As you can see, the nmap with -sT switch gave us some data. -sT switch performs some basic TCP scans on the target IP address. 
+											From the output, we can see that the target machine has its port 23 open and is running a telnet service.<br><br>
+											
+											<a  class="image featured"><img src="images/meow_9.png" alt="" /></a> <br>
+											
+											
+											<a  class="image featured"><img src="images/meow_10.png" alt="" /></a> <br>
+											
+											- root<br><br>
+											
+											For the last one, which requests the root flag, we have to connect to the target IP via telnet. Here telnet 
+											connection is enabled without any login authentication which is a vulnerability. That's why telnet is not 
+											recommended and SSH has replaced it. Here's how the connect is done vie telnet. <br><br>
+											
+											
+											<a  class="image featured"><img src="images/meow_11.png" alt="" /></a> <br>
+											
+											<a  class="image featured"><img src="images/meow_12.png" alt="" /></a> <br>
+											
+											Once connected, we can remotely access the files of the target machine. Listing (ls) the contents revealed the 'flag.txt' file. 
+											Copy and paste the flag....and that concludes this task..! <br><br>
+											
+											<a  class="image featured"><img src="images/meow_13.png" alt="" /></a> <br>
+
+
+											<strong>Stay tuned for more Hack the Box and other machines...!</strong>
+
+
+										</p>
+								</div>
+
+						</section>
+
+					<!-- Two -->
+						<!-- <section class="wrapper style1 container special">
+							<div class="row">
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+							</div>
+						</section> -->
+
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/dinesh-kumar-bca-amrita-year2/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/dineshkumar1495?tab=repositories" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>Dinesh Kumar</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
