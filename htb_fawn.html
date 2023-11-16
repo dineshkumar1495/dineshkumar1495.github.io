@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dinesh Kumar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Dinesh Kumar</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li class="current"><a href="projects.html">Projects</a></li>
+							<li class="current"><a href="blogs_list.html">Blogs</a></li>
+							<li class="current"><a href="index.html">CV</a></li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon solid fa-mobile-alt"></span>
+						<h2><strong>FAWN</strong></h2>
+						<!-- <p>Where that in the center faces the nameless horrors alone.</p> -->
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										
+										<header>
+											<h3><strong>Fawn</strong></h3>
+										</header>
+
+										
+										<p><strong>
+											Let's get started..! For every task in this series, we can get a decent idea  on what we'll be working on from the tags given at the top.<br><br>
+											<a  class="image featured"><img src="images/fawn/fawn_1.png" alt="" /></a> <br><br>
+
+											From these tags, we can see that we'll be working on FTP (I'll to what that is in a sec), network protocols, 
+											reconnaissance and anonymous access. In the real world, we would get these ideas from the reconnaissance phase of the 
+											pentesting through Open Source Intelligence (OSINT) and active recon. Moreover, reading on the topics in advance would be a 
+											great way to start. Planning and preparation is most of the work in hacking. <br><br>
+
+											<a  class="image featured"><img src="images/fawn/fawn_2.png" alt="" /></a> <br><br>
+
+											Here is the target IP. You'll probably get a different one. 
+
+											I don't want to be writing out or copying the ip address every time for commands. 
+											One way to easy my life is by assigning an environment variable which has the scope, 
+											in this case, of the whole system. This is how to set it.<br><br>
+
+											<a  class="image featured"><img src="images/fawn/fawn_3.png" alt="" /></a> <br>
+
+											the "export" command does the job. And I can check whether it as taken effect or not using the "env" command. Environment variables should always be in uppercase.
+
+											Now for the first task.<br><br>
+
+											<a  class="image featured"><img src="images/fawn/fawn_4.png" alt="" /></a> <br>
+
+											The answer for such questions can be googled. I could also use this opportunity to read on
+											the topic. This is something I love about this sort of learning. Encountering a problem 
+											first and then acquiring the tools to solve it.<br><br>
+
+											Here, <em>ftp</em> stands for File Transfer Protocol<br><br>
+														
+											<a  class="image featured"><img src="images/fawn/fawn_5.png" alt="" /></a> <br>
+											
+											For this we can do an nmap scan to on the target ip.<br><br>
+
+											<hr>
+
+											<a  class="image featured"><img src="images/fawn/fawn_6.png" alt="" /></a> <br>
+											
+											We can see that the open port is tcp and the port number is 21.<br><br>  <hr><hr>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_7.png" alt="" /></a> <br>
+											
+											Again a simple google search would tell the answer. But making a guess of "sftp" would 
+											also do the trick. <br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_8.png" alt="" /></a> <br>
+											
+											As we have seen earlier....<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_9.png" alt="" /></a> <br>
+											
+											Let's do another nmap scan asking for the version.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_10.png" alt="" /></a> <br>
+											
+											The -sV switch does that for us and we can see the version here - vsftpd 3.0.3<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_11.png" alt="" /></a> <br>
+											
+											From the scan we can also see the **Servive Info: OS:**  as Unix. This means that machine is 
+											running an Unix operating system. This can be a useful information.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_12.png" alt="" /></a> <br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_13.png" alt="" /></a> <br>
+											<hr>
+											
+											As we can see below, the "ftp -h" command will display the help menu. 
+											This is true for most tools out there.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_14.png" alt="" /></a> <br>
+											
+											<hr>
+											<a  class="image featured"><img src="images/fawn/fawn_15.png" alt="" /></a> <br>
+											
+											I'll be honest. I just guessed this answer. Sometimes making an educated guess is all you
+											have to do..!
+											
+											But we should always put our guess to a test.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_16.png" alt="" /></a> <br>
+											
+											As you can see, **anonymous** really does work. And I'm going to capitalize my poor 
+											screenshot timing. From the same out put we can see the login successful code. <br>
+											
+											
+											Which answers the next question! <br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_17.png" alt="" /></a> <br>
+											
+											For task 10: We have use the "ls" command quite a few times by this point.<br><br>
+
+
+											<a  class="image featured"><img src="images/fawn/fawn_18.png" alt="" /></a> <br>
+											
+											In accessing a ftp server only allows us to transfer the files. Not access them directly 
+											from the host machine.<br>
+											
+											To download the files from the host, "get" command is used.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_19.png" alt="" /></a> <br>
+											
+											As we can see, the get command along with the file name works.<br><br>
+											
+											<a  class="image featured"><img src="images/fawn/fawn_20.png" alt="" /></a> <br>
+
+											...and there's out flag.
+
+										</strong>
+										</p>
+								</div>
+
+						</section>
+
+					<!-- Two -->
+						<!-- <section class="wrapper style1 container special">
+							<div class="row">
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>This is Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Also Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+								<div class="col-4 col-12-narrower">
+
+									<section>
+										<header>
+											<h3>Probably Something</h3>
+										</header>
+										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+										<footer>
+											<ul class="buttons">
+												<li><a href="#" class="button small">Learn More</a></li>
+											</ul>
+										</footer>
+									</section>
+
+								</div>
+							</div>
+						</section> -->
+
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/dinesh-kumar-bca-amrita-year2/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/dineshkumar1495?tab=repositories" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>Dinesh Kumar</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
